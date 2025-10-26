@@ -1,8 +1,17 @@
-export default function Home() {
+// app/layout.tsx
+import './globals.css';
+
+export const metadata = {
+  title: 'EZN Global Properties',
+  description: 'Luxury Real Estate · Shortlets · Travel · EZN Global Properties Ltd'
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main style={{ fontFamily: "sans-serif", textAlign: "center", marginTop: "4rem" }}>
-      <h1>Welcome to EZNGP Real Estate</h1>
-      <p>Luxury properties. Global reach. Excellence in service.</p>
-    </main>
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
   );
 }
