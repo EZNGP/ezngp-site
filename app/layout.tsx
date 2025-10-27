@@ -1,17 +1,23 @@
-/* app/globals.css */
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: Inter, Arial, sans-serif;
-  background-color: #ffffff;
-  color: #111111;
-}
+// app/layout.tsx
 
-a {
-  color: #b8860b;
-  text-decoration: none;
-}
+import { Inter } from 'next/font/google';
 
-a:hover {
-  text-decoration: underline;
+// We import the Tailwind CSS file here. This is the CORRECT way.
+// Ensure you still have the `globals.css` file in /app that only contains 
+// the Tailwind imports, like: @tailwind base; @tailwind components; @tailwind utilities;
+import './globals.css'; 
+
+const inter = Inter({ subsets: ['latin'] });
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      {/* The inter.className applies the font to the body */}
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
 }
