@@ -1,23 +1,17 @@
-import './globals.css';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'EZN Global Properties Ltd',
-  description:
-    'Luxury Real Estate, Shortlets, and Global Investment Opportunities',
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body style={{ fontFamily: 'Inter, sans-serif', margin: 0 }}>
-        {children}
-      </body>
-    </html>
-  );
+/* app/globals.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
 }
 
+a {
+  color: #b8860b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
